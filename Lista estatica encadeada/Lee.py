@@ -64,3 +64,20 @@ class Lee:
         # Inicialmente também é -1 (lista vazia).
         # Quando inserimos, ult ajuda a manter referencia ao final da lista.
         self.ult = -1   
+
+        # CRIANDO O MÉTODO INICIALIZAR ESTRUTURA:
+        def incializar_estrutura(self):
+            
+            # o loop percorre até o penultimo índice da lista.
+            for i in range(self.tam_maximo -1):
+                # A primeira posição da lista receberá o nó, com a estrutura None para self.info, e i + 1 para self.prox .
+                # ou seja, o valor será sempre None na inicialização, mas o i sera incrementado, apontando para o próximo
+                # nó.  
+                self.vetor[i] = No(None, i + 1)
+            # agora, tratando o último índice da lista, que receberá None para info, e -1 para prox .
+            # o -1 indica que é o último nó.
+            self.vetor[self.tam_maximo - 1] = No(None, -1)
+            # agora o metodo deve retornar o endereço da primeira posição do vetor, que no caso é zero.
+            return 0 # esse valor ficara armazenado no atributo prox_pos_vazia .
+        
+        
