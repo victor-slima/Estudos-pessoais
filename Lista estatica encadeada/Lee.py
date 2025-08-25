@@ -52,6 +52,8 @@ class Lee:
         # inicialmente, aponta para o primeiro elemento livre, (0),
         # e serve para você saber onde inserir o próximo nó sem precisar procurar pelo vetor inteiro:
         self.prox_pos_vazia = self.inicializar_estrutura()  # "onde posso colocar o proximo elemento"
+        # esse metodo e esse atributo são responsáveis por construir a estrutura da nossa lista, e permitir
+        # que ela seja trabalhada de forma encadeada.
 
         # atributo que guarda o índice do primeiro elemento válido da lista:
         # incialmente, a lista está vazia, então prim inicia valendo -1
