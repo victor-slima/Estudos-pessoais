@@ -67,7 +67,6 @@ class Lee:
 
         # CRIANDO O MÉTODO INICIALIZAR ESTRUTURA:
         def incializar_estrutura(self):
-            
             # o loop percorre até o penultimo índice da lista.
             for i in range(self.tam_maximo -1):
                 # A primeira posição da lista receberá o nó, com a estrutura None para self.info, e i + 1 para self.prox .
@@ -80,4 +79,17 @@ class Lee:
             # agora o metodo deve retornar o endereço da primeira posição do vetor, que no caso é zero.
             return 0 # esse valor ficara armazenado no atributo prox_pos_vazia .
         
-        
+        # CRIANDO O MÉTODO INSERIR_INICIO:
+        def inserir_inicio(self, valor):
+            # se a lista estiver vazia:
+            if self.quant == 0:
+                # o prim e o ult recebem o valor, e -1, pois o primeiro valor é o primeiro e o ultimo ao mesmo tempo.
+                # no caso os dois atributos receberão o mesmo valor, se o valor inserido for o primeiro.
+                self.prim = self.ult = self.ocupa_no(valor, -1)
+                # incrementando a quantidade de elementos
+                self.quant += 1
+            # sea lista nao estiver vazia:
+            else:
+                # 
+                self.prim = self.ocupa_no(valor, self.prim)
+                self.quant += 1
